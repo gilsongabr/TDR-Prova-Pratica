@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>    
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+    <div class="navbar">
+        <p>TDR Informática - Prova Prática</p>
+    </div>
+    <h1 class="h1body1">Usuários</h1>
+    <div class="crud">
+        <table class="tabelacrud">
+            <tr>
+                <td class="tabela1">
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>ID*</label><label class="erro_validacao hide" id="valida_erro_id">Esse campo não pode ser nulo</label>
+                            <input type="text" name="id" id="id" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        </div>
+                        <div>
+                            <label>Nome*</label><label class="erro_validacao hide" id="valida_erro_nome">Esse campo não pode ser nulo</label>
+                            <input type="text" name="nome" id="nome" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
+                        </div>
+                        <div>
+                            <label>Data de Nascimento*</label><label class="erro_validacao hide" id="valida_erro_datanasc">Esse campo não pode ser nulo</label>
+                            <input type="date" name="datanasc" id="datanasc">
+                        </div>
+                        <br>
+                        <div>
+                            <label>CPF*</label><label class="erro_validacao hide" id="valida_erro_cpf">Esse campo não pode ser nulo</label>
+                            <input type="text" name="cpf" id="cpf" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        </div>
+                        <div  class="formbt">
+                            <input type="submit" value="Salvar" class="btCriar">
+                        </div>
+                    </form>
+                </td>
+                <td class="tabela2">
+                    <table class="lista" id="listadeusuarios">
+                        <thead>
+                            <tr class="bg_tabela">
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Data de Nascimento</th>
+                                <th>CPF</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
